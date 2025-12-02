@@ -11,17 +11,16 @@
 void show_histogram(double arr[], int n) {
     if (n <= 0) { printf("Dataset empty.\n"); return; }
 
-    printf("\n======== HISTOGRAM FOR %s ========\n", datasets[sel].variable_name);
-show_histogram(datasets[sel].data, datasets[sel].count);
+    printf("\n======== HISTOGRAM ========\n");
 
 /*
      * Finding min/max manually instead of calling stats,
      * partly because  to remember how the stats module behaves
      */
-    double min_val = data->data[0], max_val = data->data[0];
+    double min_val = data->data[0], max_val = arr[0];
     for (int i = 1; i < n; i++) {
-        if (data->data[i] < min_val) min_val = data->data[i];
-        if (data->data[i] > max_val) max_val = data->data[i];
+        if (data->data[i] < min_val) min_val = arr[i];
+        if (data->data[i] > max_val) max_val = arr[i];
     }
 
     // 10 bins — arbitrary, but nice and round
