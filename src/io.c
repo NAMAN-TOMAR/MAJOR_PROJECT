@@ -175,7 +175,9 @@ void visualization_menu(void) {
     for (int i=0;i<dataset_count;i++) printf("%d. %s\n", i+1, datasets[i].variable_name);
     int sel; scanf("%d",&sel); sel--;
     if (sel<0||sel>=dataset_count) { printf("Invalid selection!\n"); return; }
-    show_histogram(&datasets[sel]);
+    
+    void show_histogram(double arr[], int n);
+
 }
 
 void machine_learning_menu(void) {
