@@ -11,7 +11,9 @@
 void show_histogram(double arr[], int n) {
     if (n <= 0) { printf("Dataset empty.\n"); return; }
 
-    printf("\n======== HISTOGRAM FOR %s ========\n", data->variable_name);
+    printf("\n======== HISTOGRAM FOR %s ========\n", datasets[sel].variable_name);
+show_histogram(datasets[sel].data, datasets[sel].count);
+
 /*
      * Finding min/max manually instead of calling stats,
      * partly because  to remember how the stats module behaves
