@@ -10,6 +10,7 @@ void data_normalization();
 void find_outliers();
 void data_splitting();
 void simple_prediction();
+void show_histogram();
 
 #endif
 
