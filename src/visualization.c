@@ -19,8 +19,8 @@ void show_histogram(double arr[], int n) {
      */
     double min_val = data->data[0], max_val = arr[0];
     for (int i = 1; i < n; i++) {
-        if (data->data[i] < min_val) min_val = arr[i];
-        if (data->data[i] > max_val) max_val = arr[i];
+        if (arr[i] < min_val) min_val = arr[i];
+        if (arr[i] > max_val) max_val = arr[i];
     }
 
     // 10 bins — arbitrary, but nice and round
@@ -34,7 +34,7 @@ void show_histogram(double arr[], int n) {
     if (bin_width == 0) bin_width = 1.0; /* avoid division by zero */
 
     for (int i = 0; i < n; i++) {
-        int bin_index = (int)((data->data[i] - min_val) / bin_width);
+        int bin_index = (int)((arr[i] - min_val) / bin_width);
         if (bin_index >= bins) bin_index = bins - 1;
         if (bin_index < 0) bin_index = 0;
         histogram[bin_index]++;
