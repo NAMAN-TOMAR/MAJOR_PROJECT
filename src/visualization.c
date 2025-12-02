@@ -9,7 +9,7 @@
  * this gets the job done and is easier to debug.
  */
 void show_histogram(double arr[], int n) {
-    if (data->count == 0) { printf("Dataset empty.\n"); return; }
+    if (n <= 0) { printf("Dataset empty.\n"); return; }
 
     printf("\n======== HISTOGRAM FOR %s ========\n", data->variable_name);
 /*
@@ -17,7 +17,7 @@ void show_histogram(double arr[], int n) {
      * partly because  to remember how the stats module behaves
      */
     double min_val = data->data[0], max_val = data->data[0];
-    for (int i = 1; i < data->count; i++) {
+    for (int i = 1; i < n; i++) {
         if (data->data[i] < min_val) min_val = data->data[i];
         if (data->data[i] > max_val) max_val = data->data[i];
     }
@@ -32,7 +32,7 @@ void show_histogram(double arr[], int n) {
      */
     if (bin_width == 0) bin_width = 1.0; /* avoid division by zero */
 
-    for (int i = 0; i < data->count; i++) {
+    for (int i = 0; i < n; i++) {
         int bin_index = (int)((data->data[i] - min_val) / bin_width);
         if (bin_index >= bins) bin_index = bins - 1;
         if (bin_index < 0) bin_index = 0;
