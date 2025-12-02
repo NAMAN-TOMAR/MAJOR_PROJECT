@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <math.h>
 #include "dataset.h"
 #include "io.h"
 #include "utils.h"
