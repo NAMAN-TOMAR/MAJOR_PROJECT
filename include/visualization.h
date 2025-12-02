@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <math.h>
 
-void show_histogram(double arr[], int n);
+show_histogram(double arr[], int n);
+
 
 #endif
