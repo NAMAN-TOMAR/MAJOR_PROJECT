@@ -1,8 +1,9 @@
 #ifndef VISUALIZATION_H
 #define VISUALIZATION_H
 
-#include "dataset.h"
+#include <stdio.h>
+#include <math.h>
 
-void show_histogram(Dataset *data);
+void show_histogram(double arr[], int n);
 
-#endif /* VISUALIZATION_H */
+#endif
