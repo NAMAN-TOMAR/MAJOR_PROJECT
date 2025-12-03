@@ -74,7 +74,7 @@ double calculate_correlation(double x[], double y[], int n) {
 void print_statistics(Statistics stats, const char *variable_name) {
     printf("\n========== DESCRIPTIVE STATISTICS ==========\n");
     printf("Variable: %s\n", variable_name);
-    printf("─────────────────────────────────────────────\n");
+
     printf("Mean:                 %.4f\n", stats.mean);
     printf("Median:               %.4f\n", stats.median);
     printf("Standard Deviation:   %.4f\n", stats.std_deviation);
@@ -85,5 +85,5 @@ void print_statistics(Statistics stats, const char *variable_name) {
     printf("First Quartile (Q1):  %.4f\n", stats.q1);
     printf("Third Quartile (Q3):  %.4f\n", stats.q3);
     printf("Interquartile Range:  %.4f\n", stats.iqr);
-    printf("═════════════════════════════════════════════\n");
+  
 }
