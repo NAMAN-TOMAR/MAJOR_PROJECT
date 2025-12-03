@@ -151,6 +151,9 @@ MAJOR_PROJECT/
 │   ├── utils.c      # Sorting, etc.
 │   └── visualization.c
 │
+└── docs/ flowchart
+└──       projectreport.txt
+└── sample_input.txt
 └── README.md        # You're reading it!
 ```
 
